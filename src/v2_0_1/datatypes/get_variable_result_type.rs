@@ -15,7 +15,7 @@ pub struct GetVariableResultType {
     pub attribute_type: Option<AttributeEnumType>,
     #[serde(skip_serializing_if = "Option::is_none")]
     #[validate(length(min = 0, max = 2500))]
-    pub attribute_value: Option<String>,
+    pub attribute_value: Option<serde_json::Value>,
     pub component: ComponentType,
     pub variable: VariableType,
     #[serde(skip_serializing_if = "Option::is_none")]
