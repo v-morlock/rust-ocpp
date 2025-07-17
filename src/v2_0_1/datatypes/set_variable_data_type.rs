@@ -8,7 +8,7 @@ use crate::v2_0_1::enumerations::attribute_enum_type::AttributeEnumType;
 pub struct SetVariableDataType {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub attribute_type: Option<AttributeEnumType>,
-    pub attribute_value: String,
+    pub attribute_value: serde_json::Value,
     pub component: ComponentType,
     pub variable: VariableType,
 }
